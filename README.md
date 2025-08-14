@@ -105,9 +105,9 @@ To run this project locally, follow these steps:
     ```
 
 3.  **Run the Jupyter Notebook:**
-    Launch Jupyter and open the `ANN Phase 2.ipynb` notebook to see the data loading, model training, and evaluation process.
+    Launch Jupyter and open the `molmutnet_main.ipynb` notebook to see the data loading, model training, and evaluation process.
     ```bash
-    jupyter notebook "ANN Phase 2.ipynb"
+    jupyter notebook "molmutnet_main.ipynb"
     ```
 
 ---
