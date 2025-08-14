@@ -2,7 +2,7 @@
 
 MolMutNet is a deep learning project that leverages the power of Graph Neural Networks (GNNs) to classify chemical compounds as mutagenic or non-mutagenic. By representing molecules as graphs—where atoms are nodes and bonds are edges—this project demonstrates an effective method for predicting molecular properties directly from their structure.
 
-<table align="center">
+<table align="center" width="100%">
   <tr>
     <td align="center">
       <strong>Figure 1: Non-Mutagenic Molecule</strong><br>
@@ -69,11 +69,11 @@ The project follows a standard workflow for graph-based machine learning:
 After hyperparameter tuning, both the GCN and GraphSAGE models achieved a **peak accuracy of 89.47%** on the test set. The detailed performance of the best GCN model is presented below.
 
 #### GCN Classification Report
-| Class             | Precision | Recall | F1-Score | Support |
-| :---------------- | :-------- | :----- | :------- | :------ |
-| 0 (Non-Mutagenic) | 0.90      | 0.75   | 0.82     | 12      |
-| 1 (Mutagenic)     | 0.89      | 0.96   | 0.93     | 26      |
-| **Accuracy** |           |        | **0.89** | **38** |
+| Class | Precision | Recall | F1-Score | Support |
+| :--- | :--- | :--- | :--- | :--- |
+| 0 (Non-Mutagenic) | 0.90 | 0.75 | 0.82 | 12 |
+| 1 (Mutagenic) | 0.89 | 0.96 | 0.93 | 26 |
+| **Accuracy** | | | **0.89** | **38** |
 | **Macro Avg** | **0.90** | **0.86** | **0.87** | **38** |
 | **Weighted Avg** | **0.90** | **0.89** | **0.89** | **38** |
 
