@@ -2,18 +2,18 @@
 
 MolMutNet is a deep learning project that leverages the power of Graph Neural Networks (GNNs) to classify chemical compounds as mutagenic or non-mutagenic. By representing molecules as graphs—where atoms are nodes and bonds are edges—this project demonstrates an effective method for predicting molecular properties directly from their structure.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/meanderinghuman/MolMutNet/main/assets/non_mutagenic.png" alt="Non-Mutagenic Molecule" width="70%">
-</p>
-<p align="center">
-  <em>Figure 1: A sample non-mutagenic molecule from the MUTAG dataset.</em>
-</p>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/meanderinghuman/MolMutNet/main/assets/mutagenic.png" alt="Mutagenic Molecule" width="70%">
-</p>
-<p align="center">
-  <em>Figure 2: A sample mutagenic molecule from the MUTAG dataset.</em>
-</p>
+<table align="center">
+  <tr>
+    <td align="center">
+      <strong>Figure 1: Non-Mutagenic Molecule</strong><br>
+      <img src="https://raw.githubusercontent.com/meanderinghuman/MolMutNet/main/assets/non_mutagenic.png" alt="Non-Mutagenic Molecule" width="100%">
+    </td>
+    <td align="center">
+      <strong>Figure 2: Mutagenic Molecule</strong><br>
+      <img src="https://raw.githubusercontent.com/meanderinghuman/MolMutNet/main/assets/mutagenic.png" alt="Mutagenic Molecule" width="100%">
+    </td>
+  </tr>
+</table>
 
 ---
 
