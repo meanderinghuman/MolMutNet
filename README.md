@@ -3,9 +3,9 @@
 MolMutNet is a deep learning project that leverages the power of Graph Neural Networks (GNNs) to classify chemical compounds as mutagenic or non-mutagenic. By representing molecules as graphs—where atoms are nodes and bonds are edges—this project demonstrates an effective method for predicting molecular properties directly from their structure.
 
 <p align="center">
-  <img src="https://i.imgur.com/your_image_link_for_non_mutagenic.png" alt="Non-Mutagenic Molecule" width="45%">
+  <img src="https://raw.githubusercontent.com/meanderinghuman/MolMutNet/main/assets/non_mutagenic.png" alt="Non-Mutagenic Molecule" width="45%">
   &nbsp; &nbsp;
-  <img src="https://i.imgur.com/your_image_link_for_mutagenic.png" alt="Mutagenic Molecule" width="45%">
+  <img src="https://raw.githubusercontent.com/meanderinghuman/MolMutNet/main/assets/mutagenic.png" alt="Mutagenic Molecule" width="45%">
 </p>
 <p align="center">
   <em>Figure: Sample non-mutagenic (left) and mutagenic (right) molecules from the MUTAG dataset.</em>
@@ -77,7 +77,7 @@ After hyperparameter tuning, both the GCN and GraphSAGE models achieved a **peak
 
 #### GCN Confusion Matrix
 <p align="center">
-  <img src="https://i.imgur.com/your_confusion_matrix_image.png" alt="GCN Confusion Matrix" width="50%">
+  <img src="https://raw.githubusercontent.com/meanderinghuman/MolMutNet/main/assets/confusion_matrix.png" alt="GCN Confusion Matrix" width="50%">
 </p>
 
 These results demonstrate the model's strong ability to correctly identify mutagenic compounds, a crucial requirement for a reliable chemical screening tool.
@@ -131,25 +131,5 @@ To run this project locally, follow these steps:
 
 This project is licensed under the MIT License.
 
-<MIT License
-
-Copyright (c) [2025] [Siddharth Pal]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.>
+<details>
 <summary>MIT License Text</summary>
