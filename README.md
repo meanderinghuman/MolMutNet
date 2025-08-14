@@ -135,5 +135,3 @@ To run this project locally, follow these steps:
 
 This project is licensed under the MIT License.
 
-<details>
-<summary>MIT License Text</summary>
