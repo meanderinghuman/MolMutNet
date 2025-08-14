@@ -1,37 +1,43 @@
 # MolMutNet: GNN-Based Mutagenicity Prediction
 
-MolMutNet is a deep learning project that leverages the power of Graph Neural Networks (GNNs) to classify chemical compounds as mutagenic or non-mutagenic. By representing molecules as graphs—where atoms are nodes and bonds are edges—this project demonstrates an effective method for predicting molecular properties directly from their structure.
+MolMutNet is a deep learning project that leverages the power of Graph Neural Networks (GNNs) to classify chemical compounds as mutagenic or non-mutagenic. [cite_start]By representing molecules as graphs—where atoms are nodes and bonds are edges—this project demonstrates an effective method for predicting molecular properties directly from their structure[cite: 1, 2].
 
-
-
+<p align="center">
+  <img src="https://i.imgur.com/your_image_link_for_non_mutagenic.png" alt="Non-Mutagenic Molecule" width="45%">
+  &nbsp; &nbsp;
+  <img src="https://i.imgur.com/your_image_link_for_mutagenic.png" alt="Mutagenic Molecule" width="45%">
+</p>
+<p align="center">
+  <em>Figure: Sample non-mutagenic (left) and mutagenic (right) molecules from the MUTAG dataset.</em>
+</p>
 
 ---
 
 ### 💡 Overview
 
-Predicting the mutagenicity of a compound is a critical step in drug discovery and chemical safety assessment, helping to identify potentially harmful substances early on. Traditional methods can be time-consuming and expensive. This project utilizes GNNs, a class of neural networks designed for graph-structured data, to learn the intricate topological features of molecules and make accurate predictions. We explore and compare two popular GNN architectures: **Graph Convolutional Network (GCN)** and **GraphSAGE**.
+Predicting the mutagenicity of a compound is a critical step in drug discovery and chemical safety assessment, helping to identify potentially harmful substances early on. This project utilizes GNNs, a class of neural networks designed for graph-structured data, to learn the intricate topological features of molecules and make accurate predictions. [cite_start]We implement, tune, and compare two popular GNN architectures: a **Graph Convolutional Network (GCN)** and **GraphSAGE**[cite: 1, 2].
 
 ---
 
 ### ✨ Key Features
 
-* **Graph-Based Molecular Analysis**: Treats molecules as graphs to capture rich structural information.
-* **Two GNN Architectures**: Implements and compares both GCN and GraphSAGE models for the classification task.
-* **Hyperparameter Tuning**: Optimizes model performance by tuning key parameters like hidden channels, dropout rate, and learning rate.
-* **Detailed Performance Evaluation**: Provides comprehensive evaluation metrics, including accuracy, precision, recall, F1-score, and confusion matrices.
-* **Data Visualization**: Includes tools to visualize the molecular graphs from the dataset, labeling atoms and bond types for clear interpretability.
+* [cite_start]**Graph-Based Molecular Analysis**: Treats molecules as graphs to capture rich structural information, with atoms as nodes and bonds as edges[cite: 1, 2].
+* [cite_start]**Two GNN Architectures**: Implements and compares both GCN and GraphSAGE models for the classification task[cite: 1, 2].
+* [cite_start]**Hyperparameter Tuning**: Optimizes model performance by conducting a grid search over parameters like hidden channels, dropout rate, learning rate, and weight decay[cite: 2].
+* [cite_start]**Detailed Performance Evaluation**: Provides comprehensive evaluation metrics, including accuracy, precision, recall, F1-score, and confusion matrices[cite: 2].
+* [cite_start]**Data Visualization**: Includes tools to visualize the molecular graphs from the dataset, labeling atoms and bond types for clear interpretability[cite: 1, 2].
 
 ---
 
 ### 🔬 Dataset: The MUTAG Collection
 
-This project uses the **MUTAG** dataset, a standard benchmark for graph classification tasks. It consists of 188 chemical compounds labeled for their mutagenic effect on a bacterium.
+This project uses the **MUTAG** dataset, a standard benchmark for graph classification tasks. [cite_start]It consists of 188 chemical compounds labeled for their mutagenic effect on a bacterium[cite: 1].
 
 **Dataset Statistics:**
-* **Total Graphs**: 188 molecules
-* **Number of Classes**: 2 (Non-Mutagenic / Mutagenic)
-* **Node Features**: 7 (representing one-hot encoded atom types: C, N, O, F, I, Cl, Br)
-* **Edge Features**: 4 (representing one-hot encoded bond types: Aromatic, Single, Double, Triple)
+* [cite_start]**Total Graphs**: 188 molecules [cite: 1]
+* [cite_start]**Number of Classes**: 2 (Non-Mutagenic / Mutagenic) [cite: 1]
+* [cite_start]**Node Features**: 7, representing one-hot encoded atom types (C, N, O, F, I, Cl, Br)[cite: 1, 2].
+* [cite_start]**Edge Features**: 4, representing one-hot encoded bond types (Aromatic, Single, Double, Triple)[cite: 1, 2].
 
 ---
 
@@ -39,24 +45,24 @@ This project uses the **MUTAG** dataset, a standard benchmark for graph classifi
 
 The project follows a standard workflow for graph-based machine learning:
 
-1.  **Data Loading & Preprocessing**: The MUTAG dataset is loaded using `torch_geometric`. Node features are normalized to stabilize training.
-2.  **Data Splitting**: The dataset is split into an 80% training set and a 20% testing set.
+1.  **Data Loading & Preprocessing**: The MUTAG dataset is loaded using `torch_geometric`. [cite_start]Node features are normalized to stabilize training[cite: 2].
+2.  [cite_start]**Data Splitting**: The dataset is split into an 80% training set and a 20% testing set[cite: 2].
 3.  **Model Architecture**: Both GCN and GraphSAGE models are built with the following structure:
-    * Two graph convolution/SAGE layers with **ReLU** activation.
-    * **Batch Normalization** after each convolutional layer to improve training stability.
-    * **Dropout** for regularization to prevent overfitting.
-    * A **Global Mean Pooling** layer to aggregate node features into a single graph-level representation.
-    * A final **Linear Layer** with a Softmax activation for classification.
+    * [cite_start]Two graph convolution layers with **Leaky ReLU** activation[cite: 2].
+    * [cite_start]**Batch Normalization** after each convolutional layer to improve training stability[cite: 2].
+    * [cite_start]**Dropout** for regularization to prevent overfitting[cite: 2].
+    * [cite_start]A **Global Mean Pooling** layer to aggregate node features into a single graph-level representation[cite: 1, 2].
+    * [cite_start]A final **Linear Layer** with a Log-Softmax activation for classification[cite: 1, 2].
 4.  **Training & Optimization**: The models are trained using:
-    * **Loss Function**: Cross-Entropy Loss, suitable for multi-class classification tasks.
-    * **Optimizer**: The Adam optimizer, which adaptively adjusts the learning rate.
-5.  **Hyperparameter Tuning**: A grid search is performed to find the optimal combination of hidden channels, dropout rate, learning rate, and weight decay, maximizing the model's performance on the test set.
+    * [cite_start]**Loss Function**: Cross-Entropy Loss, suitable for multi-class classification tasks[cite: 2].
+    * [cite_start]**Optimizer**: The Adam optimizer, which adaptively adjusts the learning rate[cite: 1, 2].
+5.  [cite_start]**Hyperparameter Tuning**: A grid search is performed to find the optimal combination of hidden channels, dropout rate, learning rate, and weight decay, maximizing the model's performance on the test set[cite: 2].
 
 ---
 
 ### 📊 Performance & Results
 
-After hyperparameter tuning, both the GCN and GraphSAGE models achieved a **peak accuracy of 89.47%** on the test set. The detailed performance of the best GCN model is presented below.
+[cite_start]After hyperparameter tuning, both the GCN and GraphSAGE models achieved a **peak accuracy of 89.47%** on the test set[cite: 2]. The detailed performance of the best GCN model is presented below.
 
 #### GCN Classification Report
 | Class | Precision | Recall | F1-Score | Support |
@@ -67,11 +73,12 @@ After hyperparameter tuning, both the GCN and GraphSAGE models achieved a **peak
 | **Macro Avg** | **0.90** | **0.86** | **0.87** | **38** |
 | **Weighted Avg** | **0.90** | **0.89** | **0.89** | **38** |
 
+[cite_start]*Classification report generated using `scikit-learn` on the test data predictions*[cite: 2].
+
 #### GCN Confusion Matrix
-| | Predicted Non-Mutagenic | Predicted Mutagenic |
-| :--- | :--- | :--- |
-| **Actual Non-Mutagenic** | 9 | 3 |
-| **Actual Mutagenic**| 1 | 25 |
+<p align="center">
+  <img src="https://i.imgur.com/your_confusion_matrix_image.png" alt="GCN Confusion Matrix" width="50%">
+</p>
 
 These results demonstrate the model's strong ability to correctly identify mutagenic compounds, a crucial requirement for a reliable chemical screening tool.
 
@@ -83,7 +90,7 @@ To run this project locally, follow these steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://your-repo-link.git](https://your-repo-link.git)
+    git clone [https://github.com/meanderinghuman/MolMutNet.git](https://github.com/meanderinghuman/MolMutNet.git)
     cd MolMutNet
     ```
 
@@ -103,11 +110,11 @@ To run this project locally, follow these steps:
 
 ### 🛠️ Technologies Used
 
-* **PyTorch**
-* **PyTorch Geometric (PyG)**
-* **Scikit-learn**
-* **NetworkX**
-* **Matplotlib & Seaborn**
+* [cite_start]**PyTorch** [cite: 1, 2]
+* [cite_start]**PyTorch Geometric (PyG)** [cite: 1, 2]
+* [cite_start]**Scikit-learn** [cite: 1, 2]
+* [cite_start]**NetworkX** [cite: 1, 2]
+* [cite_start]**Matplotlib & Seaborn** [cite: 1, 2]
 
 ---
 
