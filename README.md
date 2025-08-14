@@ -3,12 +3,16 @@
 MolMutNet is a deep learning project that leverages the power of Graph Neural Networks (GNNs) to classify chemical compounds as mutagenic or non-mutagenic. By representing molecules as graphs—where atoms are nodes and bonds are edges—this project demonstrates an effective method for predicting molecular properties directly from their structure.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/meanderinghuman/MolMutNet/main/assets/non_mutagenic.png" alt="Non-Mutagenic Molecule" width="45%">
-  &nbsp; &nbsp;
-  <img src="https://raw.githubusercontent.com/meanderinghuman/MolMutNet/main/assets/mutagenic.png" alt="Mutagenic Molecule" width="45%">
+  <img src="https://raw.githubusercontent.com/meanderinghuman/MolMutNet/main/assets/non_mutagenic.png" alt="Non-Mutagenic Molecule" width="70%">
 </p>
 <p align="center">
-  <em>Figure: Sample non-mutagenic (left) and mutagenic (right) molecules from the MUTAG dataset.</em>
+  <em>Figure 1: A sample non-mutagenic molecule from the MUTAG dataset.</em>
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/meanderinghuman/MolMutNet/main/assets/mutagenic.png" alt="Mutagenic Molecule" width="70%">
+</p>
+<p align="center">
+  <em>Figure 2: A sample mutagenic molecule from the MUTAG dataset.</em>
 </p>
 
 ---
@@ -65,11 +69,11 @@ The project follows a standard workflow for graph-based machine learning:
 After hyperparameter tuning, both the GCN and GraphSAGE models achieved a **peak accuracy of 89.47%** on the test set. The detailed performance of the best GCN model is presented below.
 
 #### GCN Classification Report
-| Class | Precision | Recall | F1-Score | Support |
-| :--- | :--- | :--- | :--- | :--- |
-| 0 (Non-Mutagenic) | 0.90 | 0.75 | 0.82 | 12 |
-| 1 (Mutagenic) | 0.89 | 0.96 | 0.93 | 26 |
-| **Accuracy** | | | **0.89** | **38** |
+| Class             | Precision | Recall | F1-Score | Support |
+| :---------------- | :-------- | :----- | :------- | :------ |
+| 0 (Non-Mutagenic) | 0.90      | 0.75   | 0.82     | 12      |
+| 1 (Mutagenic)     | 0.89      | 0.96   | 0.93     | 26      |
+| **Accuracy** |           |        | **0.89** | **38** |
 | **Macro Avg** | **0.90** | **0.86** | **0.87** | **38** |
 | **Weighted Avg** | **0.90** | **0.89** | **0.89** | **38** |
 
@@ -77,7 +81,7 @@ After hyperparameter tuning, both the GCN and GraphSAGE models achieved a **peak
 
 #### GCN Confusion Matrix
 <p align="center">
-  <img src="https://raw.githubusercontent.com/meanderinghuman/MolMutNet/main/assets/confusion_matrix.png" alt="GCN Confusion Matrix" width="50%">
+  <img src="https://raw.githubusercontent.com/meanderinghuman/MolMutNet/main/assets/confusion_matrix.png" alt="GCN Confusion Matrix" width="60%">
 </p>
 
 These results demonstrate the model's strong ability to correctly identify mutagenic compounds, a crucial requirement for a reliable chemical screening tool.
@@ -101,9 +105,9 @@ To run this project locally, follow these steps:
     ```
 
 3.  **Run the Jupyter Notebook:**
-    Launch Jupyter and open the `molmutnet_main.ipynb` notebook to see the data loading, model training, and evaluation process.
+    Launch Jupyter and open the `ANN Phase 2.ipynb` notebook to see the data loading, model training, and evaluation process.
     ```bash
-    jupyter notebook "molmutnet_main.ipynb"
+    jupyter notebook "ANN Phase 2.ipynb"
     ```
 
 ---
@@ -130,3 +134,6 @@ To run this project locally, follow these steps:
 ### 📜 License
 
 This project is licensed under the MIT License.
+
+<details>
+<summary>MIT License Text</summary>
